@@ -141,23 +141,43 @@ public class Tree {
         return parent;
     }
 
-    public void inOrderTraversal() {
-        // TODO: implement in-order tree traversal, printing the items
-        throw new RuntimeException("Not yet implemented!");
+    public void inOrderTraversal(Node node) {
+        if (node == null) {
+            return;
+        }
+        inOrderTraversal(node.left);
+        System.out.println(node.item);
+        inOrderTraversal(node.right);
     }
 
-    public void postOrderTraversal() {
-        // TODO: implement post-order tree traversal, printing the items
-        throw new RuntimeException("Not yet implemented!");
+    public void postOrderTraversal(Node node) {
+        if (node == null) {
+            return;
+        }
+        postOrderTraversal(node.right);
+        System.out.println(node.item);
+        postOrderTraversal(node.left);
     }
 
-    public void preOrderTraversal() {
-        // TODO: implement pre-order tree traversal, printing the items
-        throw new RuntimeException("Not yet implemented!");
+    public void preOrderTraversal( Node node) {
+        if (node == null) {
+            return;
+        }
+        System.out.println(node.item);
+        preOrderTraversal(node.left);
+        preOrderTraversal(node.right);
     }
 
     public static void main(String[] args) {
         Tree t = new Tree();
+        t.insert(5);
+        t.insert(3);
+        t.insert(7);
+        t.insert(2);
+        t.insert(4);
+        t.insert(6);
+        t.insert(8);
+        t.preOrderTraversal(t.root);
     }
 }
 
