@@ -9,11 +9,6 @@ public class Heap<Item extends Comparable<Item>> {
     this.items = new ArrayList<>();
   }
 
-  /*
-  Extract the minimum element from the heap and return it.
-  it will also reorganize the heap to maintain the heap property.
-  using bubble down. and swap the last element with the root with the function swap
-   */
   public Item extractMin() {
     Item min = items.get(0);
     swap(0, items.size() - 1);
@@ -21,9 +16,7 @@ public class Heap<Item extends Comparable<Item>> {
     bubbleDown(0);
     return min;
 
-
   }
-
 
   private int parentIndex(int index) {
     return (index - 1) / 2;
@@ -50,7 +43,8 @@ public class Heap<Item extends Comparable<Item>> {
   private void bubbleUp(int nodeIndex) {
     while (!isRoot(nodeIndex)) {
       int parentIndex = parentIndex(nodeIndex);
-      int difference = itemAt(parentIndex).compareTo(itemAt(nodeIndex));
+      int difference = itemAt(parentIndex)
+        .compareTo(itemAt(nodeIndex));
       if (difference > 0) {
         swap(parentIndex, nodeIndex);
       }
@@ -79,11 +73,11 @@ public class Heap<Item extends Comparable<Item>> {
     return item;
   }
 
-
   private void bubbleDown(int parentIndex) {
     while (hasAnyChildren(parentIndex)) {
       int leastChildIndex = leastChildIndex(parentIndex);
-      int difference = itemAt(parentIndex).compareTo(itemAt(leastChildIndex));
+      int difference = itemAt(parentIndex)
+        .compareTo(itemAt(leastChildIndex));
       if (difference <= 0) {
         break;
       }
@@ -99,8 +93,8 @@ public class Heap<Item extends Comparable<Item>> {
     if (!hasRightChild(parentIndex)) {
       return leftChildIndex(parentIndex);
     }
-    int leftDifference =
-        itemAt(leftChildIndex(parentIndex)).compareTo(itemAt(rightChildIndex(parentIndex)));
+    int leftDifference = itemAt(leftChildIndex(parentIndex))
+      .compareTo(itemAt(rightChildIndex(parentIndex)));
     if (leftDifference <= 0) {
       return leftChildIndex(parentIndex);
     }
