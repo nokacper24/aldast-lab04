@@ -49,8 +49,8 @@ public void preOrderTraversal( Node node) {
 }
 ```
 
-### Q3
-## a)
+## Q3
+### a)
 ```java
 package no.ntnu.idata2302.lab04;
 
@@ -172,4 +172,4 @@ public class Heap<Item extends Comparable<Item>> {
   }
 }
 ```
-## b)
+### b)
