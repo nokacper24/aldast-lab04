@@ -118,4 +118,8 @@ public class Heap<Item extends Comparable<Item>> {
   private boolean hasAnyChildren(int index) {
     return leftChildIndex(index) <= lastIndex();
   }
+
+  public String toString() {
+    return items.toString();
+  }
 }
