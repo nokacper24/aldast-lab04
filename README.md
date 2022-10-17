@@ -183,7 +183,7 @@ public class Heap<Item extends Comparable<Item>> {
 | ...    | ...          | ...          |
 | h      | $2^{h+1} -1$ | $2^h$        |
 
-At most: $2^{h+1} -1$
+At most: $2^{h+1} -1$  
 At least: $2^h$
 
 ### c)
