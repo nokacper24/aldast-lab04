@@ -182,6 +182,7 @@ public class Heap<Item extends Comparable<Item>> {
 | 4      | 31                   | 16           |
 | ...    | ...                  | ...          |
 | h      | $\sum_{i=0}^{h} 2^i$ | $2^h$        |
+
 At most: $\sum_{i=0}^{h} 2^i$  
 At least: $2^h$
 
