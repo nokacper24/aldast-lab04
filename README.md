@@ -173,17 +173,17 @@ public class Heap<Item extends Comparable<Item>> {
 }
 ```
 ### b)
-| height | max elements         | min elements |
-| ------ | -------------------- | ------------ |
-| 0      | 1                    | 1            |
-| 1      | 3                    | 2            |
-| 2      | 7                    | 4            |
-| 3      | 15                   | 8            |
-| 4      | 31                   | 16           |
-| ...    | ...                  | ...          |
-| h      | $\sum_{i=0}^{h} 2^i$ | $2^h$        |
+| height | max elements | min elements |
+| ------ | ------------ | ------------ |
+| 0      | 1            | 1            |
+| 1      | 3            | 2            |
+| 2      | 7            | 4            |
+| 3      | 15           | 8            |
+| 4      | 31           | 16           |
+| ...    | ...          | ...          |
+| h      | $2^{h+1} -1$ | $2^h$        |
 
-At most: $\sum_{i=0}^{h} 2^i$  
+At most: $2^{h+1} -1$
 At least: $2^h$
 
 ### c)
