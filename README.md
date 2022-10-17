@@ -187,3 +187,9 @@ At most: $2^{h+1} -1$
 At least: $2^h$
 
 ### c)
+First smallest is alway in level 0.  
+Second smallest always in level 1.  
+Thitd smallest in either level 1 or 2.  
+Fourth smalles in 2 to 4.  
+Lower bound is $\log_2k$ $\mod2$
+Upper bound is k.
