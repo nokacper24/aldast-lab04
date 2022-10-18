@@ -191,5 +191,5 @@ First smallest is alway in level 0.
 Second smallest always in level 1.  
 Thitd smallest in either level 1 or 2.  
 Fourth smalles in 2 to 4.  
-Lower bound is $\log_2k$ $\mod2$
-Upper bound is k.
+Lower bound is $\log_2k - (\log_2k \mod1)$  
+Upper bound is $k-1$  
